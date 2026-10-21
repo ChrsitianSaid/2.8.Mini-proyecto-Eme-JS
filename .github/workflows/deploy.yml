@@ -1,0 +1,61 @@
+
+name: Eme-JS - Validacion y despliegue
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    name: Validar JavaScript
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Comprobar sintaxis de app.js
+        run: node --check app.js
+
+  desplegar:
+    name: Publicar en GitHub Pages
+    if: github.event_name == 'push'
+    needs: validar
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Preparar los archivos de la web
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Desplegar la web
+        id: deployment
+        uses: actions/deploy-pages@v4
