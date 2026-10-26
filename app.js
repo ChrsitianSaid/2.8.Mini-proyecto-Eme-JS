@@ -58,17 +58,17 @@ function procesarIncidentes(loteIncidentes,recursosDisponibles){
         const{id,descripcion,gravedad,resuelta}=loteIncidentes[i];
         if(recursosDisponibles<=0){
             mostrar.error("lo sentimos,actualmente no tenemos recursos suficientes")
-            debugger;
             break;
         } else if(!resuelta){
             if(gravedad===5){
             mostrar.warn(`${id},${descripcion},${gravedad},${resuelta}`);
             recursosDisponibles=recursosDisponibles-1
-            continue
+            continue;
             }
             mostrar.info(`${id},${descripcion},${gravedad},${resuelta}`);
             recursosDisponibles=recursosDisponibles-1
-            continue
+            debugger;
+            continue;
         }
     }  
 };
