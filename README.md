@@ -5,7 +5,7 @@ Eme-JS es un proyecto web desarrollado en pareja que simula la gestión de emerg
 **Equipo:** Adrian Gonzalez Diez(Driver inicial) & Christian Said jimenez mahecha (Navigator inicial)
  
 ### 🔍 Captura y Análisis de Variables (Debugger)
-...(5-8 líneas).
+
  **Foto1:**
  <figure>
  <img width="1534" height="790" alt="image" src="https://github.com/user-attachments/assets/6483cbbe-d915-4cf4-9ae7-bd2954de633c" />
@@ -26,4 +26,7 @@ Eme-JS es un proyecto web desarrollado en pareja que simula la gestión de emerg
  
  
 ### 👥 Experiencia de Pair Programming
-...(5-8 líneas).
+
+Nos ha parecido interesante la experiencia usando la técnica de "Pair Programing", gracias a que cada uno de nosotros estaba pendiente del código, es decir mientras uno programaba el otro verificaba y documentaba el código evitando así errores y dejando mas claro y limpio el código. A sus vez también ha sido un desafío debido a que cada uno posee una manera de trabajar distinta y a veces no nos poníamos de acuerdo en como deberia de estar el código, o si una practica era mejor que otra. 
+
+Por último esto también ayudo a tomarnos un descanso cada vez que cambiábamos de driver. Ya que así el driver podía descansar del código, y posteriormente cuando se volviera a cambiar de roles podía ver los errores con mayor facilidad.
