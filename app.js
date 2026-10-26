@@ -59,9 +59,9 @@ function procesarIncidentes(loteIncidentes,recursosDisponibles){
         if(recursosDisponibles<=0){
             mostrar.error("lo sentimos,actualmente no tenemos recursos suficientes")
             debugger;
+            break;
         } else if(!resuelta){
-            if(gravedad==5)
-            {
+            if(gravedad===5){
             mostrar.warn(`${id},${descripcion},${gravedad},${resuelta}`);
             recursosDisponibles=recursosDisponibles-1
             continue
